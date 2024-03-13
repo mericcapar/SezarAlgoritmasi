@@ -1,11 +1,11 @@
 def sezar_sifreleyici(metin , anahtar):
-    alfabe = 'abcçdefgğhıijklmnoörpsştuüvyz'
+    alfabe = 'abcçdefgğhıijklmnoöprsştuüvyz'
     sifrelenmis_metin = ''
 
     for harf in metin:
         if harf.lower() in alfabe:
             harf_index = alfabe.index(harf.lower())
-            yeni_index = (harf_index + (anahtar+1)) % len(alfabe)
+            yeni_index = (harf_index + (anahtar + 1)) % len(alfabe)
             yeni_harf = alfabe[yeni_index]
 
             if harf.isupper():
@@ -21,6 +21,7 @@ print(sezar_sifreleyici('Meric',3))
 print(sezar_sifreleyici('Nisa', 3))
 print(sezar_sifreleyici('mercan',3))
 print(sezar_sifreleyici('Kuzu',4))
+
 
 
 
